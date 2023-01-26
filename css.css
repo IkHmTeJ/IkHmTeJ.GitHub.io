@@ -36,6 +36,7 @@ p {
     display: block;
     margin-right: 50px;
     font-family: 'Segoe UI';
+    font-size: 21px;
     color: #e5e1e1cc;
 }
 pre {
