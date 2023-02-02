@@ -2,6 +2,42 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <script>
+        function myform(form)
+        {
+            var passed = false;
+            if (form.Phone.value.length != 10)
+            {
+                alert("יש להכניס מספר טלפון בן 10 ספרות.");
+            }
+            else if (isNaN(form.Phone.value))
+            {
+                alert("יש להקליד ספרות בלבד ");
+            }
+            else if (form.email.value.indexOf("@") == -1)
+            {
+                alert("יש להקליד כתובת מייל תקינה");
+            }
+            else if (form.email.value.indexOf(".") == -1)
+            {
+                alert("יש להקליד כתובת מייל תקינה");
+            }
+            else if (form.fname.value.length < 4)
+            {
+                alert("יש להכניס שם תקין")
+            }
+            else if (form.fname.value.indexOf(" ") == -1)
+            {
+                alert("יש להכניס שם ושם משפחה")
+            }
+        
+         else
+        {
+            passed = true;
+        }
+        return passed;
+       }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
@@ -17,13 +53,13 @@
 <body>
     <center>
         <h1>צור קשר:</h1>
-        <form method="post" action="Form1.html" name="form">
+        <form method="post" action="Form1.html" name="form" onsubmit="return myform(form)">
             <table>
                 <tr>
 
-                    <td><input class="input" type="text" name="name" placeholder=שם מלא /></td>
-                    <td><input class="input" type="tel" name="Phone" maxlength="10" placeholder=מספר טלפון /></td>
-                    <td><input class="input" type="email" name="name" placeholder=אימייל /></td>
+                    <td><input class="input" type="text" name="fname" placeholder=שם מלא /></td>
+                    <td><input class="input" type="tel" name="Phone" placeholder=מספר טלפון /></td>
+                    <td><input class="input" type="text" name="email" placeholder=אימייל /></td>
                 </tr>
                 <tr>
                     <td width="100%" colspan="3">
