@@ -183,7 +183,7 @@ li {
 }
 /*logo*/
 .logo {
-    width: 7%;
+    width: 167px;
     z-index:1
 }
 /*tool bar on top-->*/
@@ -199,8 +199,8 @@ li {
         padding:0; 
     }
     nav li {display:inline-block;
-            margin-right:50px;
-            padding-top:13px;    
+            margin-right:1%;
+            padding-top:0.5%;    
     }
     nav a {color:white;
            text-decoration:none
