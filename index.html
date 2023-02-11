@@ -2,39 +2,83 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css.css" />
     <meta charset="utf-8" />
-    <title></title>
+    <style>
+        li {
+            font-family: 'Amatic SC', cursive;
+            font-size: 25px
+        }
+
+        button {
+            border: none;
+            background: transparent;
+        }
+    </style>
+    <title>Moran's Tattoo's</title>
 </head>
-<body class="bimg">
+<body class="bimg" background-image: url(bimg.jpg);>
+
     <div class="container">
         <header class="header2">
-            
-                <div class="nav">
-                    <nav>
-                        <ul>
-                            <li><a target="iframe1" href="HP1.html">עמוד הבית</a></li>
-                            <li><a target="iframe1" href="Recovery.html">טיפול בקעקוע</a></li>
-                            <li><a target="iframe1" href="info.html">סוגי קעקועים</a></li>
-                            <li><a target="iframe1" href="ImagePage/ImagePage.html">גלרייה</a></li>
-                            <li><a target="iframe1" href="History.html">היסטורייה</a></li>
-                            <li><a target="iframe1" href="Piercing.html">טיפול בפירסינג</a></li>
-                            <li><a href="#"></a></li>
-                            <li><a target="iframe1" href="CU.html">צור קשר</a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                        </ul>
-                    </nav>
-                </div>
+
+            <div class="nav">
+                <nav>
+                    <ul>
+                        <li><a target="iframe1" href="HP1.html">עמוד הבית</a></li>
+                        <li><a target="iframe1" href="Recovery.html">טיפול בקעקוע</a></li>
+                        <li><a target="iframe1" href="info.html">סוגי קעקועים</a></li>
+                        <li><a target="iframe1" href="ImagePage/ImagePage.html">גלרייה</a></li>
+                        <li><a target="iframe1" href="WaterPaint/WaterPaint.html">קעקועים בסגנון צבעי מים</a></li>
+                        <li><a target="iframe1" href="History.html">היסטורייה</a></li>
+                        <li><a target="iframe1" href="Piercing.html">טיפול בפירסינג</a></li>
+                        <li><a target="iframe1" href="CU.html">צור קשר</a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><button onclick="changebutton" id="change-background-button"</button><img id="cbb" onclick="changebutton2()" src="button.png" style="width:20%" alt="Button Image"></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
-    
+
         <header class="header"><a href="index.html"><img class="logo" src="Logo-B.png" /></a></header>
         <div class="content-body">
             <iframe src="HP1.html" frameborder="0" name="iframe1"></iframe>
-           
-        </div> 
+
         </div>
+    </div>
+
+    <script>
+        var changeBackgroundButton = document.getElementById("change-background-button");
+        var currentBackground = "bimg.jpg";
+
+        changeBackgroundButton.addEventListener("click", function () {
+            if (currentBackground === "bimg.jpg") {
+                document.body.style.backgroundImage = "url('bimg2.jpg')";
+                currentBackground = "bimg2.jpg";
+            } else {
+                document.body.style.backgroundImage = "url('bimg.jpg')";
+                currentBackground = "bimg.jpg";
+            }
+        });
+
+    </script>
+    <script>
+        var buttonState = "button.png";
+    function changebutton2() {
+        var button = document.getElementById("cbb");
+        if (buttonState === "button.png") {
+            button.src = "button2.png";
+            buttonState = "button2.png";
+        } else {
+            button.src = "button.png";
+            buttonState = "button.png";
+    }
+    }
+    </script>
 </body>
 </html>
