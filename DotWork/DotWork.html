@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css.css" />
+    <meta charset="utf-8" />
+    <style>
+        h1 {
+            font-family: 'Amatic SC', cursive
+        }
+
+        .parent {
+            display: flex;
+            flex-flow: row wrap;
+            align-content: center;
+            gap:5px
+
+
+        }
+
+        .innerbox {
+            flex: 1 0 33%;
+            max-width:600px;
+            max-height:600px;
+            
+        }
+        
+        .imgflex{
+            max-height:100%;
+            max-width:100%;
+        }
+        @media screen and(max-width:800px){
+            .innerbox {
+                flex: 1 0 50%;
+                max-width: 300px;
+                max-height: 300px;
+            }
+    </style>
+    
+    <title>DotWork</title>
+</head>
+<body>
+    <center>
+        <h1>קעקעים בסגנון נקודות לדוגמא</h1>
+        <div class="parent">
+            <div class="innerbox"><img class="imgflex" src="1.jpg"/></div>
+            <div class="innerbox"><img class="imgflex" src="2.jpg"/></div>
+            <div class="innerbox"><img class="imgflex" src="3.jpg"/></div>
+            <div class="innerbox"><img class="imgflex" src="4.jpg"/></div>
+            <div class="innerbox"><img class="imgflex" src="5.jpg"/></div>
+            <div class="innerbox"><img class="imgflex" src="6.jpg"/></div>
+            <div class="innerbox"><img class="imgflex" src="7.jpg"/></div>
+            <div class="innerbox"><img class="imgflex" src="8.jpg"/></div>
+            <div class="innerbox"><img class="imgflex" src="9.jpg"/></div>
+            
+        </div>
+    </center>
+</body>
+</html>

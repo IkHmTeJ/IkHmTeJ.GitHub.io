@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css.css" />
+    <meta charset="utf-8" />
+    <style>
+        form div {
+            margin: 5px;
+            padding: 0;
+        }
+        form{direction:rtl}
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="time"],
+        input[type="tel"] {
+            width: 300px;
+            height: 40px;
+            font-size: 16px;
+        }
+        label {
+            width: 100px;
+            display: inline-block;
+        }
+    </style>
+    <title></title>
+</head>
+<body>
+    <center>
+    <form action="Order_out.html" method="post">
+        <div>
+            <label class="input" for="name">שם:</label>
+            <input class="input" type="text" id="name" name="name">
+        </div>
+        <div>
+            <label class="input" for="email">אימייל:</label>
+            <input class="input" type="email" id="email" name="email">
+        </div>
+        <div>
+            <label class="input" for="date">תאריך:</label>
+            <input class="input" type="date" id="date" name="date">
+        </div>
+        <div>
+            <label class="input" for="time">שעה:</label>
+            <input class="input" type="time" id="time" name="time">
+        </div>
+        <div>
+            <label class="input" for="phone">טלפון:</label>
+            <input class="input" type="tel" id="phone" name="phone">
+        </div>
+        <div>
+            <input class="button" type="submit" value="שליחה">
+        </div>
+    </form>
+</center>
+</body>
+</html>
